@@ -276,6 +276,57 @@
               i++;
               j++;
             }
+            else if ( i == 8 && j == 3 ) //Wednesday
+            {
+              document.getElementById("Q").innerHTML = "'...'- your partner";
+              document.getElementById("A").innerHTML = "...";
+              document.getElementById("B").innerHTML = "";
+              document.getElementById("C").innerHTML = "";
+              i++;
+              j++;
+              q++;
+            }
+            else if ( i == 9 && j == 4 )
+            {
+              document.getElementById("Q").innerHTML = "It's time for your partner to grade your lab, did you do it?";
+              document.getElementById("A").innerHTML = "Absolutely!";
+              document.getElementById("B").innerHTML = "Which lab was due again?";
+              document.getElementById("C").innerHTML = "";
+              i++;
+            }
+            else if ( i == 10 && j == 4 )
+            {
+              document.getElementById("Q").innerHTML = "'Can you help a brotha out?' - You";
+              document.getElementById("A").innerHTML = "**Your partners actions**";
+              document.getElementById("B").innerHTML = "Maybe next time...";
+              document.getElementById("C").innerHTML = "'Sure...' **Gives good grade in the moment but changes it out right before you turn it in**";
+              i++;
+              j++;
+            }
+            else if ( i == 11 && j == 4) // Wednesday END
+            {
+              document.getElementById("Q").innerHTML = "Good job completing the Wednesday path!";
+              document.getElementById("A").innerHTML = "There is no more to this path";
+              document.getElementById("B").innerHTML = "You can close this application now.";
+              document.getElementById("C").innerHTML = "Or not... I'm not your parent(s). Live your own life.";
+              i = 11;
+            }
+            else if ( i == 11 && j == 3 )
+            {
+              document.getElementById("Q").innerHTML = "Good job you finagled a 10/10";
+              document.getElementById("A").innerHTML = "";
+              document.getElementById("B").innerHTML = "";
+              document.getElementById("C").innerHTML = "";
+              i++;
+            }
+            else if ( i == 11 && j == 3 && q == 1)
+            {
+              document.getElementById("Q").innerHTML = "Paybacks a *Insert bad word here*";
+              document.getElementById("A").innerHTML = "";
+              document.getElementById("B").innerHTML = "";
+              document.getElementById("C").innerHTML = "";
+              i++;
+            }
             else if ( i == 7 ) //Monday
             {
               document.getElementById("Q").innerHTML = "Wow, your group knows what's up!";
@@ -300,6 +351,14 @@
               document.getElementById("C").innerHTML = "Or not... I'm not your parent(s). Live your own life.";
               i = 9;
             }
+            else if ( i == 10)
+          {
+            document.getElementById("Q").innerHTML = "...";
+            document.getElementById("A").innerHTML = "";
+            document.getElementById("B").innerHTML = "";
+            document.getElementById("C").innerHTML = "";
+            i++;
+          }
           }
 
           function PathC()
@@ -369,6 +428,22 @@
                 document.getElementById("B").innerHTML = "There is nothing more to do now since this is a COSC CLASS simulator";
                 document.getElementById("C").innerHTML = "Maybe try a differnt path";
                 i = 100;
+              }
+              else if ( i == 8 )
+              {
+                document.getElementById("Q").innerHTML = "Class ends you got 10 points for participation c:";
+                document.getElementById("A").innerHTML = "Awesome!";
+                document.getElementById("B").innerHTML = "I could careless...";
+                document.getElementById("C").innerHTML = "Points is life, The reason why I live is for the points!";
+                i++;
+              }
+              else if ( i == 8 && j == 3 )
+              {
+                document.getElementById("Q").innerHTML = "'Thanks brotha, I've got you're back in the future";
+                document.getElementById("A").innerHTML = "Thanks!";
+                document.getElementById("B").innerHTML = "I could careless...";
+                document.getElementById("C").innerHTML = "No worries bro";
+                i++;
               }
             }
           </script>
