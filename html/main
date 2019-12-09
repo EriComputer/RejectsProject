@@ -1,12 +1,376 @@
 <!<!DOCTYPE html>
 <html>
 <head>
-
+  <style>
+    div {
+      border: 1px solid black;
+      margin: 5px;
+    }
+  </style>
 </head>
 
 <body>
-  <h1> Heading <h1>
-    <p>Paragraph</p>
-    <p>Another paragraph </p>
-  </body>
-</html>
+  <h2> Welcome to COSC Simulator! <h2>
+    <h1> DISCALIMER!!! <br> This is a <strong> fictional </strong> game and in no way reflects the actions or intentions of any real person! </h1>
+    <br>
+    <br>
+    <p><strong> How does one play? </strong><br> You just click one of the choices to make a choice and the game will progress!</p>
+    <br>
+    <p> The choices you make will effect what you can and can't do in the future! </p>
+    <br>
+    <h4 id = "Q"> Got it? Then try it out </h4>
+    <div id = "A">
+      <p> Click me! </p>
+    </div>
+    <div id = "B">
+      <p> This is also a valid clicking option. Click me! </p>
+    </div>
+    <div id = "C">
+      <p> Procedural drift? Not here, Click me! </p>
+    </div>
+
+    <script>
+      //Main JS
+
+      var i = 0; //This is the Turn Counter
+      var j = 0;
+      var q = 0;
+      document.getElementById("A").addEventListener("click",PathA);
+      document.getElementById("B").addEventListener("click",PathB);
+      document.getElementById("C").addEventListener("click",PathC);
+
+      //Choice Functions
+
+      function PathA()
+      {
+        if ( i == 0 )
+        {
+          document.getElementById("Q").innerHTML = "You wake up in the morning, you have COSC 236 tonight...";
+          document.getElementById("A").innerHTML = "Lets go!";
+          document.getElementById("B").innerHTML = "I don't care";
+          document.getElementById("C").innerHTML = "Ah *insert bad word here*";
+            i++;
+          }
+          else if ( i == 1 )
+          {
+            document.getElementById("Q").innerHTML = "What day is it?";
+            document.getElementById("A").innerHTML = "Monday";
+            document.getElementById("B").innerHTML = "Wednesday";
+            document.getElementById("C").innerHTML = "";
+            i++;
+          }
+          else if ( i == 2 )
+          {
+            document.getElementById("Q").innerHTML = "Are you going to show up?";
+            document.getElementById("A").innerHTML = "Yeah sure, why not?";
+            document.getElementById("B").innerHTML = "I paid how much for this class? Of course i'm going.";
+            document.getElementById("C").innerHTML = "If I don't my parents will kill me";
+            i++;
+          }
+          else if ( i == 3 )
+          {
+            document.getElementById("Q").innerHTML = "When will you arrive?";
+            document.getElementById("A").innerHTML = "Early bird gets the worm! Early but not too early.";
+            document.getElementById("B").innerHTML = "I like to arrive fashionably late, ten minutes in!";
+            document.getElementById("C").innerHTML = "I'm feeling kinda hungry, maybe an hour in...";
+            i++;
+          }
+          else if ( i == 4 )
+          {
+            document.getElementById("Q").innerHTML = "Good job arriving early, you have to wait now.";
+            document.getElementById("A").innerHTML = "Click me to continue!";
+            document.getElementById("B").innerHTML = "...";
+            document.getElementById("C").innerHTML = "Tick tock the time passes as you look at the clock.";
+            i++;
+          }
+          else if ( i == 4 && j == 1 ) //Wednesday
+          {
+            document.getElementById("Q").innerHTML = "You have arrived on time! Unfortunatly no one is here yet...";
+            document.getElementById("A").innerHTML = "Darn";
+            document.getElementById("B").innerHTML = "...";
+            document.getElementById("C").innerHTML = "Tick tock the time passes as you look at the clock.";
+            i = 6;
+          }
+          else if ( i == 6 && j == 1) //Wednesday
+          {
+            document.getElementById("Q").innerHTML = "Hey, it turns out there was a lab due today. How do you grade your partners lab?";
+            document.getElementById("A").innerHTML = "All ones!";
+            document.getElementById("B").innerHTML = "Actually grade the lab";
+            document.getElementById("C").innerHTML = "Leave";
+            i = 7;
+            j++;
+          }
+          else if ( i == 7 && j == 2) //Wednesday
+          {
+            document.getElementById("Q").innerHTML = "You survived the class without doing a *insert bad word* thing!";
+            document.getElementById("A").innerHTML = "Knew this class was easy! B)";
+            document.getElementById("B").innerHTML = "Okay...";
+            document.getElementById("C").innerHTML = "But at what cost.";
+            i = 9;
+            j++;
+          }
+          else if ( i == 5 )
+          {
+            document.getElementById("Q").innerHTML = "Class begins as usual, Professor Bachman begins the lecture.";
+            document.getElementById("A").innerHTML = "...";
+            document.getElementById("B").innerHTML = "...";
+            document.getElementById("C").innerHTML = "...";
+            i++;
+          }
+          else if ( i == 6 )
+          {
+            document.getElementById("Q").innerHTML = "Hey, are you awake? Professor Bachman announces that there is a group worksheet to do! What do you do?";
+            document.getElementById("A").innerHTML = "Stay and do the worksheet alone";
+            document.getElementById("B").innerHTML = "Stay and do the worksheet with group";
+            document.getElementById("C").innerHTML = "Leave";
+            i++;
+          }
+          else if ( i == 7 )
+          {
+            document.getElementById("Q").innerHTML = "Wow, your team must not like you very much...";
+            document.getElementById("A").innerHTML = "Nevertheless you finished the worksheet!";
+            document.getElementById("B").innerHTML = "Who needs teamates anyways...";
+            document.getElementById("C").innerHTML = "Good job... I guess...";
+            i++;
+          }
+          else if ( i == 8 )
+          {
+            document.getElementById("Q").innerHTML = "Class ends you got 10 points for participation c:";
+            document.getElementById("A").innerHTML = "Awesome!";
+            document.getElementById("B").innerHTML = "I could careless...";
+            document.getElementById("C").innerHTML = "Points is life, The reason why I live is for the points!";
+            i++;
+          }
+          else if ( i == 8 && j == 3 )
+          {
+            document.getElementById("Q").innerHTML = "'Thanks brotha, I've got you're back in the future";
+            document.getElementById("A").innerHTML = "Thanks!";
+            document.getElementById("B").innerHTML = "I could careless...";
+            document.getElementById("C").innerHTML = "No worries bro";
+            i++;
+          }
+          else if ( i == 9 && j == 3 )
+          {
+            document.getElementById("Q").innerHTML = "It's time for your partner to grade your lab, did you do it?";
+            document.getElementById("A").innerHTML = "Absolutely!";
+            document.getElementById("B").innerHTML = "Which lab was due again?";
+            document.getElementById("C").innerHTML = "";
+            i++;
+          }
+          else if ( i == 10 && j == 3 )
+          {
+            document.getElementById("Q").innerHTML = "That's a first, did you actually do it or did you b.s. it?";
+            document.getElementById("A").innerHTML = "I did it for real";
+            document.getElementById("B").innerHTML = "...";
+            document.getElementById("C").innerHTML = "";
+            i++;
+          }
+          else if ( i == 11 && j == 3 )
+          {
+            document.getElementById("Q").innerHTML = "That's great!";
+            document.getElementById("A").innerHTML = "Good job you got a 10/10";
+            document.getElementById("B").innerHTML = "Click one of these to continue!";
+            document.getElementById("C").innerHTML = "Yes, even this one";
+            i++;
+          }
+          else if ( i == 12 && j == 3 )
+          {
+            document.getElementById("Q").innerHTML = "It's been a ______ day, time to go to bed...";
+            document.getElementById("A").innerHTML = "It's been a productive day";
+            document.getElementById("B").innerHTML = "@#$#@!@#$%^$";
+            document.getElementById("C").innerHTML = "";
+            i++;
+          }
+          else if ( i == 13 && j == 3 )
+          {
+            document.getElementById("Q").innerHTML = "Good job completing the Wednesday path!";
+            document.getElementById("A").innerHTML = "There is no more to this path";
+            document.getElementById("B").innerHTML = "You can close this application now.";
+            document.getElementById("C").innerHTML = "Or not... I'm not your parent(s)";
+            i++;
+          }
+          else if ( i == 9)
+          {
+            document.getElementById("Q").innerHTML = "Good job completing the Monday path!";
+            document.getElementById("A").innerHTML = "There is no more to this path";
+            document.getElementById("B").innerHTML = "You can close this application now.";
+            document.getElementById("C").innerHTML = "Or not... I'm not your parent(s)";
+            i = 9;
+          }
+        }
+
+        function PathB()
+        {
+          if ( i == 0 )
+          {
+            document.getElementById("Q").innerHTML = "You wake up in the morning, you have COSC 236 tonight...";
+            document.getElementById("A").innerHTML = "Lets go!";
+            document.getElementById("B").innerHTML = "I don't care";
+            document.getElementById("C").innerHTML = "Ah *insert bad word here*";
+              i++;
+            }
+            else if ( i == 1 )
+            {
+              document.getElementById("Q").innerHTML = "What day is it?";
+              document.getElementById("A").innerHTML = "Monday";
+              document.getElementById("B").innerHTML = "Wednesday";
+              document.getElementById("C").innerHTML = "";
+              i++;
+              j++;
+            }
+            else if ( i == 2 && j == 1 )
+            {
+              document.getElementById("Q").innerHTML = "Humpday huh? There is a lab due today! Are you going to show up?";
+              document.getElementById("A").innerHTML = "Yeah sure, why not?";
+              document.getElementById("B").innerHTML = "I paid how much for this class? Of course i'm going.";
+              document.getElementById("C").innerHTML = "Maybe next time.";
+              i++;
+            }
+            else if ( i == 3 )
+            {
+              document.getElementById("Q").innerHTML = "When will you arrive?";
+              document.getElementById("A").innerHTML = "Early bird gets the worm";
+              document.getElementById("B").innerHTML = "I like to arrive fashionably late, ten minutes in!";
+              document.getElementById("C").innerHTML = "I'm feeling kinda hungry, maybe an hour in.";
+              i++;
+            }
+            else if ( i == 4 && j == 1 ) //Wednesday
+            {
+              document.getElementById("Q").innerHTML = "You have arrived ten minutes in. Walking in mid lecture, half the class looks at you for a moment as you take quietly take your seat.";
+              document.getElementById("A").innerHTML = "Click me to continue!";
+              document.getElementById("B").innerHTML = "...";
+              document.getElementById("C").innerHTML = "Tick tock the time passes as you look at the clock.";
+              i = 10;
+            }
+            else if ( i == 4 ) //Monday
+            {
+              document.getElementById("Q").innerHTML = "You have arrived ten minutes in. Walking in mid lecture, half the class looks at you for a moment.";
+              document.getElementById("A").innerHTML = "Click me to continue!";
+              document.getElementById("B").innerHTML = "...";
+              document.getElementById("C").innerHTML = "Tick tock the time passes as you look at the clock.";
+              i = 10;
+            }
+            else if ( i == 10 ) //both
+            {
+              document.getElementById("Q").innerHTML = "Out of all three choices you really decided to pick the '...''?!";
+              document.getElementById("A").innerHTML = "...";
+              document.getElementById("B").innerHTML = "...";
+              document.getElementById("C").innerHTML = "...";
+              i = 6;
+            }
+            else if ( i == 6 ) //Wednesday
+            {
+              document.getElementById("Q").innerHTML = "Hey, it turns out there was a lab due today. How do you grade your partners lab?";
+              document.getElementById("A").innerHTML = "All ones!";
+              document.getElementById("B").innerHTML = "Actually grade the lab";
+              document.getElementById("C").innerHTML = "Leave";
+              i = 7;
+              j++;
+            }
+            else if ( i == 7 && j == 2 ) //Wednesday
+            {
+              document.getElementById("Q").innerHTML = "'Can you help a brotha out?' - Your Partner";
+              document.getElementById("A").innerHTML = "Yeah sure, no Problem";
+              document.getElementById("B").innerHTML = "Maybe next time...";
+              document.getElementById("C").innerHTML = "'Sure...' **Gives good grade in the moment but changes it out right before you turn it in**";
+              i++;
+              j++;
+            }
+            else if ( i == 7 ) //Monday
+            {
+              document.getElementById("Q").innerHTML = "Wow, your group knows what's up!";
+              document.getElementById("A").innerHTML = "Everyone works hard!";
+              document.getElementById("B").innerHTML = "Everyone contributes!";
+              document.getElementById("C").innerHTML = "One step closer to working for Tuckersoft";
+              i++;
+            }
+            else if ( i == 8 ) //Monday
+            {
+              document.getElementById("Q").innerHTML = "Class ends you got 10 points for participation c:";
+              document.getElementById("A").innerHTML = "Awesome!";
+              document.getElementById("B").innerHTML = "I could careless...";
+              document.getElementById("C").innerHTML = "Points is life, The reason why I live is for the points!";
+              i++;
+            }
+            else if ( i == 9 ) // Monday END
+            {
+              document.getElementById("Q").innerHTML = "Good job completing the Monday path!";
+              document.getElementById("A").innerHTML = "There is no more to this path";
+              document.getElementById("B").innerHTML = "You can close this application now.";
+              document.getElementById("C").innerHTML = "Or not... I'm not your parent(s). Live your own life.";
+              i = 9;
+            }
+          }
+
+          function PathC()
+          {
+            if ( i == 0 )
+            {
+              document.getElementById("Q").innerHTML = "You wake up in the morning, you have COSC 236 tonight...";
+              document.getElementById("A").innerHTML = "Lets go!";
+              document.getElementById("B").innerHTML = "I don't care";
+              document.getElementById("C").innerHTML = "Ah *insert bad word here*";
+                i++;
+              }
+              else if ( i == 1 )
+              {
+                document.getElementById("Q").innerHTML = "What day is it?";
+                document.getElementById("A").innerHTML = "Monday";
+                document.getElementById("B").innerHTML = "Wednesday";
+                document.getElementById("C").innerHTML = "";
+                i++;
+              }
+              else if ( i == 2 )
+              {
+                document.getElementById("Q").innerHTML = "What day is it?";
+                document.getElementById("A").innerHTML = "Monday";
+                document.getElementById("B").innerHTML = "Wednesday";
+                document.getElementById("C").innerHTML = "Nothing interesting happened by clicking this. Try picking an actual day.";
+                i = 1;
+              }
+              else if ( i == 3 )
+              {
+                document.getElementById("Q").innerHTML = "When will you arrive?";
+                document.getElementById("A").innerHTML = "Early bird gets the worm";
+                document.getElementById("B").innerHTML = "I like to arrive fashionably late, ten minutes in!";
+                document.getElementById("C").innerHTML = "I'm feeling kinda hungry, maybe an hour in.";
+                i++;
+              }
+              else if ( i == 3 && j == 1)
+              {
+                document.getElementById("Q").innerHTML = "You decided not to go to class";
+                document.getElementById("A").innerHTML = "The game is now over";
+                document.getElementById("B").innerHTML = "There is nothing more to do now since this is a COSC CLASS simulator";
+                document.getElementById("C").innerHTML = "Maybe try a differnt path";
+                i = 100;
+              }
+              else if ( i == 4 ) //Monday
+              {
+                document.getElementById("Q").innerHTML = "You walk in post lecture. The whole class looks at you for a moment.";
+                document.getElementById("A").innerHTML = "Click me to continue!";
+                document.getElementById("B").innerHTML = "...";
+                document.getElementById("C").innerHTML = "Tick tock the time passes as you look at the clock.";
+                i++;
+                q++;
+              }
+              else if ( i == 5 && q == 1)
+              {
+                document.getElementById("Q").innerHTML = "Hey, are you awake? Professor Bachman announces that there is a group worksheet to do! What do you do?";
+                document.getElementById("A").innerHTML = "Stay and do the worksheet alone";
+                document.getElementById("B").innerHTML = "Stay and do the worksheet with group";
+                document.getElementById("C").innerHTML = "Leave";
+                i = 3;
+                j = 1;
+              }
+              else if ( i == 3 && j == 1)
+              {
+                document.getElementById("Q").innerHTML = "You decided not to go to class";
+                document.getElementById("A").innerHTML = "The game is now over";
+                document.getElementById("B").innerHTML = "There is nothing more to do now since this is a COSC CLASS simulator";
+                document.getElementById("C").innerHTML = "Maybe try a differnt path";
+                i = 100;
+              }
+            }
+          </script>
+        </body>
+        </html>
