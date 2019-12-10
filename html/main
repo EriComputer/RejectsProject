@@ -63,7 +63,7 @@
     <div id = "B">
       <p> In </p>
     </div>
-    <img class = "image" width = "635" height = "620" src = "file:///C:/Users/ops15/Pictures/Saved%20Pictures/bachman.jpg">
+    <img class = "image" width = "635" height = "620" src = "https://ibb.co/SNpTGW7">
     <script>
     //Main JS
     var i = 0;
