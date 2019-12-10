@@ -2,9 +2,30 @@
 <html>
 <head>
   <style>
+  *{
+    box-sizing: border-box;
+    text-align: center;
+  }
+  body {
+    background-image: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Minimalist-Crumpled-Paper-Simple-Background-Image.jpg););
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: silver;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+  }
   div {
+    text-align: center;
     border: 1px solid black;
-    margin: 5px;
+    margin: 10;
+    width:98%;
+    height: 10%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 5px 5px grey;
   }
   </style>
 </head>
@@ -21,96 +42,135 @@
     <p> You are a college student at Towson University. You have finals starting tomorrow. What will you choose in the following scenarios </p>
     <h4 id = "Q"> Are you staying in or going out? </h4>
     <div id = "A">
-      <p> In </p>
+      <p> Out </p>
     </div>
     <div id = "B">
-      <p> Out </p>
+      <p> In </p>
     </div>
 
     <script>
     //Main JS
-
-    var i = 0; //This is the Turn Counter
+    var i = 0;
+    var o = 0;
+    var h = 0;
     var j = 0;
     var k = 0;
-    var l = 1;
+    var l = 0;
     document.getElementById("A").addEventListener("click",PathA);
     document.getElementById("B").addEventListener("click",PathB);
     //Choice Functions
 
     function PathA()
     {
-      else if (i == 1) //i1
+      if ( h == 0 )
       {
         document.getElementById("Q").innerHTML = "Who are we going out with?";
         document.getElementById("A").innerHTML = "Go out with bros";
         document.getElementById("B").innerHTML = "Go out with h!#%";
-        i++;
+        h++;
         j++;
+        i = 10;
       }
-      else if (i == 2) //i2
+      else if ( h == 1 )
       {
         document.getElementById("Q").innerHTML = "What's the moves?";
         document.getElementById("A").innerHTML = "T'd";
         document.getElementById("B").innerHTML = "Games";
-        i++;
+        h++;
+        j++;
+        i = 10;
       }
-      else if (i == 3) //i3 finished
+      else if ( k == 1 )
       {
-        document.getElementById("Q").innerHTML = "You were arrested";
+        document.getElementById("Q").innerHTML = "Friend-Zoned";
         document.getElementById("A").innerHTML = "";
         document.getElementById("B").innerHTML = "";
+        h = 10;
+        i = 10;
+        l = 10;
       }
-      if (i == 2 && j == 1) //b1
+       else if ( h == 2 )
      {
-       document.getElementById("Q").innerHTML = "Storytime";
+       document.getElementById("Q").innerHTML = "You were arrested";
        document.getElementById("A").innerHTML = "";
        document.getElementById("B").innerHTML = "";
+       i = 10;
+       j = 10;
      }
-      else if (k == 1 && l == 1 ) //K1 L1 finish
+      else if ( i == 1 )
       {
         document.getElementById("Q").innerHTML = "You Pray- Yet you failed.";
         document.getElementById("A").innerHTML = "";
         document.getElementById("B").innerHTML = "";
+        h = 10;
+        i = 10;
+        o = 10;
       }
     }
 
     function PathB()
     {
-       if (k == 0) //L1
+       if ( i == 0 )
       {
         document.getElementById("Q").innerHTML = "What are you going to do now?";
         document.getElementById("A").innerHTML = "Pray";
         document.getElementById("B").innerHTML = "Study";
-        k++;
-        l++;
+        i++;
+        o++;
+        h = 10;
       }
-      if (k == 1 && l == 1) //L2 finish
+      else if ( o == 1 )
      {
        document.getElementById("Q").innerHTML = "You passed finals";
        document.getElementById("A").innerHTML = "";
        document.getElementById("B").innerHTML = "";
+       h = 10;
+       i = 10;
      }
-      else if (i == 2 && j == 1) //i2 j1 finish
+     else if ( l == 1 )
+     {
+       document.getElementById("Q").innerHTML = "'Chill'";
+       document.getElementById("A").innerHTML = "";
+       document.getElementById("B").innerHTML = "";
+       i = 10;
+       h = 10;
+       k = 10;
+     }
+      else if ( j == 2 )
       {
         document.getElementById("Q").innerHTML = "Failed finals because of gaming too hard";
         document.getElementById("A").innerHTML = "";
         document.getElementById("B").innerHTML = "";
+        i = 10;
+        h = 10;
       }
-      else if (i == 1 && j == 1) //a2 b1
+      else if ( h == 1 && j == 1)
       {
         document.getElementById("Q").innerHTML = "What's the moves?";
         document.getElementById("A").innerHTML = "Storytime";
         document.getElementById("B").innerHTML = "Netflix";
-        i++;
+        k++;
+        l++;
+        i = 10;
+        h = 10;
       }
-      else if (i == 1 && j == 2) //a2 b2
+      // FUN Stuff
+
+      var ballRadius = 10;
+      ctx.arc(x,y,ballRadius,0,Math.PI*2);
+      if (y + dy < 0)
       {
-        document.getElementById("Q").innerHTML = "'Chill'";
-        document.getElementById("A").innerHTML = "";
-        document.getElementById("B").innerHTML = "";
-        i++;
+        dy = -dy;
       }
+      if (y + dy > canvas.height)
+      {
+        dy = -dy;
+      }
+      if (y + dy > canvas.height || y + dy < 0)
+      {
+        dy = -dy;
+      }
+      
     }
     </script>
   </body>
