@@ -19,12 +19,12 @@
     <p> The choices you make will effect what you can and can't do in the future! </p>
     <br>
     <p> You are a college student at Towson University. You have finals starting tomorrow. What will you choose in the following scenarios </p>
-    <h4 id = "Q"> Got it? Then try it out </h4>
+    <h4 id = "Q"> Are you staying in or going out? </h4>
     <div id = "A">
-      <p> Click me! </p>
+      <p> In </p>
     </div>
     <div id = "B">
-      <p> This is also a valid clicking option. Click me! </p>
+      <p> Out </p>
     </div>
 
     <script>
@@ -32,38 +32,87 @@
 
     var i = 0; //This is the Turn Counter
     var j = 0;
-    var q = 0;
+    var k = 0;
+    var l = 1;
     document.getElementById("A").addEventListener("click",PathA);
     document.getElementById("B").addEventListener("click",PathB);
     //Choice Functions
 
     function PathA()
     {
-      if ( i == 0 )
+      if ( i == 0 ) //a1
       {
         document.getElementById("Q").innerHTML = "Are you staing in or going out?";
         document.getElementById("A").innerHTML = "In";
         document.getElementById("B").innerHTML = "Out";
         i++;
       }
-      else if (i == 1)
+      else if (i == 1) //a2
       {
-
+        document.getElementById("Q").innerHTML = "Who are we going out with?";
+        document.getElementById("A").innerHTML = "Go out with bros";
+        document.getElementById("B").innerHTML = "Go out with h!#%";
+        i++;
+      }
+      else if (i == 2) //a3
+      {
+        document.getElementById("Q").innerHTML = "What's the moves?";
+        document.getElementById("A").innerHTML = "T'd";
+        document.getElementById("B").innerHTML = "Games";
+        i++;
+      }
+      else if (i == 3) //a4
+      {
+        document.getElementById("Q").innerHTML = "You were arrested";
+        document.getElementById("A").innerHTML = "";
+        document.getElementById("B").innerHTML = "";
+        i++;
+      }
+      else if (i == 1 && j == 1 && k == 1) //a1 b1
+      {
+        document.getElementById("Q").innerHTML = "You Pray- Yet you failed.";
+        document.getElementById("A").innerHTML = "";
+        document.getElementById("B").innerHTML = "";
+        i++;
       }
     }
 
     function PathB()
     {
-      if ( i == 0 )
+       if (k == 0) //b1
       {
-        document.getElementById("Q").innerHTML = "Are you staing in or going out?";
-        document.getElementById("A").innerHTML = "In";
-        document.getElementById("B").innerHTML = "Out";
+        document.getElementById("Q").innerHTML = "What are you going to do now?";
+        document.getElementById("A").innerHTML = "Pray";
+        document.getElementById("B").innerHTML = "Study";
+        k++;
+      }
+      if (k == 1) //b2
+     {
+       document.getElementById("Q").innerHTML = "What are you going to do now?";
+       document.getElementById("A").innerHTML = "Pray";
+       document.getElementById("B").innerHTML = "Study";
+       k++;
+     }
+      else if (i == 2 && j == 1) //a3 b1
+      {
+        document.getElementById("Q").innerHTML = "Failed finals";
+        document.getElementById("A").innerHTML = "";
+        document.getElementById("B").innerHTML = "";
         i++;
       }
-      else if (i == 1)
+      else if (i == 2 && j == 1) //a3 b1
       {
-
+        document.getElementById("Q").innerHTML = "What's the moves?";
+        document.getElementById("A").innerHTML = "Storytime";
+        document.getElementById("B").innerHTML = "Netflix";
+        i++;
+      }
+      else if (i == 2 && j == 2) //a2 b2
+      {
+        document.getElementById("Q").innerHTML = "'Chill'";
+        document.getElementById("A").innerHTML = "";
+        document.getElementById("B").innerHTML = "";
+        i++;
       }
     }
     </script>
