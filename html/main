@@ -6,7 +6,8 @@
     box-sizing: border-box;
     text-align: center;
   }
-  body {
+  body
+  {
     background-image: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Minimalist-Crumpled-Paper-Simple-Background-Image.jpg););
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -17,7 +18,8 @@
     height: 100%;
     background-size: 100% 100%;
   }
-  div {
+  div
+  {
     text-align: center;
     border: 1px solid black;
     margin: 10;
@@ -27,6 +29,20 @@
     background-color: white;
     box-shadow: 5px 5px grey;
   }
+  .image {
+    position: fixed;
+    pointer-events: none;
+    top: 10%;
+    left: 30%;
+    opacity: 0.2;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
   </style>
 </head>
 
@@ -47,7 +63,7 @@
     <div id = "B">
       <p> In </p>
     </div>
-
+    <img class = "image" width = "635" height = "620" src = "file:///C:/Users/ops15/Pictures/Saved%20Pictures/bachman.jpg">
     <script>
     //Main JS
     var i = 0;
@@ -89,14 +105,14 @@
         i = 10;
         l = 10;
       }
-       else if ( h == 2 )
-     {
-       document.getElementById("Q").innerHTML = "You were arrested";
-       document.getElementById("A").innerHTML = "";
-       document.getElementById("B").innerHTML = "";
-       i = 10;
-       j = 10;
-     }
+      else if ( h == 2 )
+      {
+        document.getElementById("Q").innerHTML = "You were arrested";
+        document.getElementById("A").innerHTML = "";
+        document.getElementById("B").innerHTML = "";
+        i = 10;
+        j = 10;
+      }
       else if ( i == 1 )
       {
         document.getElementById("Q").innerHTML = "You Pray- Yet you failed.";
@@ -110,7 +126,7 @@
 
     function PathB()
     {
-       if ( i == 0 )
+      if ( i == 0 )
       {
         document.getElementById("Q").innerHTML = "What are you going to do now?";
         document.getElementById("A").innerHTML = "Pray";
@@ -120,22 +136,22 @@
         h = 10;
       }
       else if ( o == 1 )
-     {
-       document.getElementById("Q").innerHTML = "You passed finals";
-       document.getElementById("A").innerHTML = "";
-       document.getElementById("B").innerHTML = "";
-       h = 10;
-       i = 10;
-     }
-     else if ( l == 1 )
-     {
-       document.getElementById("Q").innerHTML = "'Chill'";
-       document.getElementById("A").innerHTML = "";
-       document.getElementById("B").innerHTML = "";
-       i = 10;
-       h = 10;
-       k = 10;
-     }
+      {
+        document.getElementById("Q").innerHTML = "You passed finals";
+        document.getElementById("A").innerHTML = "";
+        document.getElementById("B").innerHTML = "";
+        h = 10;
+        i = 10;
+      }
+      else if ( l == 1 )
+      {
+        document.getElementById("Q").innerHTML = "'Chill'";
+        document.getElementById("A").innerHTML = "";
+        document.getElementById("B").innerHTML = "";
+        i = 10;
+        h = 10;
+        k = 10;
+      }
       else if ( j == 2 )
       {
         document.getElementById("Q").innerHTML = "Failed finals because of gaming too hard";
@@ -154,23 +170,6 @@
         i = 10;
         h = 10;
       }
-      // FUN Stuff
-
-      var ballRadius = 10;
-      ctx.arc(x,y,ballRadius,0,Math.PI*2);
-      if (y + dy < 0)
-      {
-        dy = -dy;
-      }
-      if (y + dy > canvas.height)
-      {
-        dy = -dy;
-      }
-      if (y + dy > canvas.height || y + dy < 0)
-      {
-        dy = -dy;
-      }
-
     }
     </script>
   </body>
