@@ -10,14 +10,15 @@
 </head>
 
 <body>
-  <h2> Title <h2>
-    <h1> DISCALIMER!!! <br> This is a <strong> fictional </strong> game and in no way reflects the actions or intentions of any real person! </h1>
+  <h2> College Simulator <h2>
+    <h1> DISCALIMER!!! <br> Not for those under 13 years of age. Viewer discretion is advised. </h1>
     <br>
     <br>
     <p><strong> How does one play? </strong><br> You just click one of the choices to make a choice and the game will progress!</p>
     <br>
     <p> The choices you make will effect what you can and can't do in the future! </p>
     <br>
+    <p> You are a college student at Towson University. You have finals starting tomorrow. What will you choose in the following scenarios </p>
     <h4 id = "Q"> Got it? Then try it out </h4>
     <div id = "A">
       <p> Click me! </p>
@@ -40,9 +41,12 @@
     {
       if ( i == 0 )
       {
-
+        document.getElementById("Q").innerHTML = "Are you staing in or going out?";
+        document.getElementById("A").innerHTML = "In";
+        document.getElementById("B").innerHTML = "Out";
+        i++;
       }
-      else if (i == )
+      else if (i == 1)
       {
 
       }
@@ -52,9 +56,12 @@
     {
       if ( i == 0 )
       {
-
+        document.getElementById("Q").innerHTML = "Are you staing in or going out?";
+        document.getElementById("A").innerHTML = "In";
+        document.getElementById("B").innerHTML = "Out";
+        i++;
       }
-      else if (i == )
+      else if (i == 1)
       {
 
       }
